@@ -2,6 +2,12 @@
   <p><%= customer.name %></p>
   <p><%= customer.phone %></p>
   <p><%= customer.email %></p>
+  <p>Povince:
+    <% if !customer.province_id.nil?%>
+    <%= customer.province.name %></p>
+    <% else%>
+    <%= "None" %></p>
+    <%end%>
   <p><%= image_tag(customer.image, size:"180x200") %></p>
   <p><%= customer.notes %></p>
   <p><%= link_to 'Edit', edit_customer_path(customer) %></p>
