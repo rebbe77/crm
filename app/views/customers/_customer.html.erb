@@ -1,11 +1,9 @@
-
-  <tr>
-    <td><%= customer.name %></td>
-    <td><%= customer.phone %></td>
-    <td><%= customer.email %></td>
-    <td><%= image_tag(customer.image, size:"180x200") %></td>
-    <td><%= customer.notes %></td>
-    <td><%= link_to 'Show', customer %></td>
-    <td><%= link_to 'Edit', edit_customer_path(customer) %></td>
-    <td><%= link_to 'Destroy', customer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
+<div class="customer">
+  <p><%= customer.name %></p>
+  <p><%= customer.phone %></p>
+  <p><%= customer.email %></p>
+  <p><%= image_tag(customer.image, size:"180x200") %></p>
+  <p><%= customer.notes %></p>
+  <p><%= link_to 'Edit', edit_customer_path(customer) %></p>
+  <p><%= link_to 'Delete', customer, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+</div>
